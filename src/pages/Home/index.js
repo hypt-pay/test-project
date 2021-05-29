@@ -4,6 +4,7 @@ import New from './News/index'
 // 导入react 路由组件
 import { Route } from 'react-router-dom'
 import { TabBar } from 'antd-mobile'
+
 export default class Home extends React.Component {
   state = {
     // 默认选中的标签
@@ -55,12 +56,10 @@ export default class Home extends React.Component {
             <TabBar.Item
               title="首页"
               key="Life"
-              icon={<div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
-              }}
-              />
+              icon={
+                <svg className="icon" aria-hidden="true">
+                  <use xlinkHref="#icon-wode"></use>
+                </svg>
               }
               selectedIcon={<div style={{
                 width: '22px',
@@ -140,11 +139,11 @@ export default class Home extends React.Component {
               {this.renderContent('Friend')}
             </TabBar.Item>
             <TabBar.Item
-              icon={
-                <svg className="icon" ariaHidden="true">
-                  <use xlinkHref="#icon-shouye_huaban1"></use>
-                </svg>
-              }
+              // icon={
+              //   <svg className="icon" aria-hidden="true">
+              //     <use xlinkHref="#icon-shouye_huaban1"></use>
+              //   </svg>
+              // }
               selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
               title="我的"
               key="my"
