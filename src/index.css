@@ -1,6 +1,6 @@
 body,
 html {
-  color: #ccc;
+  color: #333;
   background-color: #fff;
   font-family: "Microsoft YaHei";
   height: 100%;
@@ -8,6 +8,8 @@ html {
 
 * {
   box-sizing: border-box;
+  /* 让页面轮播图滑动不报错 */
+  touch-action: pan-y;
 }
 .icon {
   width: 1em;
@@ -16,3 +18,13 @@ html {
   fill: currentColor;
   overflow: hidden;
 }
+h2,
+p {
+  margin: 0px;
+}
+/* html,
+body,
+#root,
+.App {
+  height: 100%;
+} */
